@@ -1,6 +1,6 @@
 *.iml
 out
 .idea
-idea/vcs.iml
+idea/vcs.xml
 
 
