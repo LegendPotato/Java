@@ -1,0 +1,52 @@
+        **关于类型转化问题：**
+
+        (1)String---------》char/char[]
+        String str="ab";
+        char str1=str.charAt(0);  //得到a
+        char str2=str.charAt(1);  //得到b
+
+        char[]str3=str.toCharArray();
+        System.out.println(Arrays.toString(str3));
+
+        (2)char/char[]-----------》String
+        char m='a';
+        String str=String.valueOf(m);
+        String str2=m+" ";
+
+        char[]m={'a','b'};
+        String str3=String.copyValueOf(m);
+        String str4=new String(m);
+
+        (3)int-----------》 String
+        int i;
+        String s=String.valueOf(i);
+        String s=Integer.toString(i);
+        String s=""+i;
+
+        (4)String----------》 int
+
+        int i=Integer.parseInt([String]);
+        i=Integer.parseInt([String],[int radix]);
+        int i=Integer.valueOf(my_str).intValue();
+
+
+        **HashMap的用法**
+        (1)根据key来查找，判断是否包含给定的key。
+        boolean contains=hashMap.containsKey(key);
+        if(contains){ // 如果条件为真
+        System.out.println("存在"+key);
+        }else{
+        System.out.println("不存在"+key);
+        }
+        (2)根据value来查找，判断是否包含给定的value.
+        boolean contains=hashMap.containsValue(Value);
+        if(contains){ // 如果条件为真
+        System.out.println("存在"+value);
+        }else{
+        System.out.println("不存在"+value);
+        }
+        (3)利用keySet遍历所有的key值。
+
+        for(Object key:hashMap.keySet()){
+        System.out.println("key= "+key+" value "+hashMap.get(key));
+        }
