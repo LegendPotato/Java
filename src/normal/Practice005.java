@@ -1,5 +1,7 @@
 package normal;
 
+import java.util.*;
+
 /**
  * 处理二进制问题：
     两个int32整数m和n的二进制表达，有多少个位(bit)不同么？
@@ -9,9 +11,19 @@ package normal;
 public class Practice005 {
 
     public static void main(String[] args) {
-        int a = 10;
-        int b = 20;
+        int a = 2;
+        int b = 3;
         System.out.println(countBitDiff(a,b));
+//        List<Integer> list = new ArrayList();
+//        list.add(1);
+//        list.remove(0);
+//        System.out.println(list.contains(1));
+//        System.out.println(list);
+
+        Deque<Integer> list1 = new LinkedList<>();
+        list1.offer(1);
+        int head = list1.peek();
+        System.out.println(list1);
     }
     public static int countBitDiff(int a ,int b){
         int y=a ^ b;

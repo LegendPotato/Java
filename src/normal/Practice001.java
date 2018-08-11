@@ -1,12 +1,14 @@
 package normal;
+/**
+ * 1.输入一个正数n，输出所有和为n的连续正数序列。
+ 分析：设定两个指针，min指向和为n的连续正数序列的最小值，max指向和为n的连续正数序列最大值。sum表示真正的和。
+ 初始情况下,min、max和sum 都指向1.
+ 当sum小于n时，max++；
+ 当sum大于n时，min++;
+ 当sum等于n时，输出整个序列。
+ 链接：https://blog.csdn.net/hqm12345qw/article/details/52154249
+ */
 
-//        1.输入一个正数n，输出所有和为n的连续正数序列。
-//        分析：设定两个指针，min指向和为n的连续正数序列的最小值，max指向和为n的连续正数序列最大值。sum表示真正的和。
-//        初始情况下,min、max和sum 都指向1.
-//        当sum小于n时，max++；
-//        当sum大于n时，min++;
-//        当sum等于n时，输出整个序列。
-//链接：https://blog.csdn.net/hqm12345qw/article/details/52154249
 public class Practice001 {
     public static void getAns(int n) {
 
