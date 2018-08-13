@@ -1,3 +1,14 @@
 out
-.idea
+.idea/*
 *.iml
+.project
+.settings/
+.prefs
+.pydevproject
+.idea/
+.idea
+.DS_Store
+.cache
+*.pyc
+*.html
+*.xlm
