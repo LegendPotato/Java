@@ -11,4 +11,4 @@ out
 .cache
 *.pyc
 *.html
-*.xlm
+*.xml
