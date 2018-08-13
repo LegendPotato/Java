@@ -1,7 +1,9 @@
+package test;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main {
+public class wangyi1 {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

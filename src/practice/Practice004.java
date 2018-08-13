@@ -1,6 +1,5 @@
-package normal;
+package practice;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 
 /**

@@ -1,6 +1,7 @@
+package test;
 //import java.util.Scanner;
 //
-//public class Main3 {
+//public class test.wangyi2 {
 //    public static void main(String[] args) {
 //        Scanner in = new Scanner(System.in);
 //        int n = in.nextInt();
@@ -41,7 +42,7 @@
 //}
 import java.util.Scanner;
 
-public class Main3 {
+public class wangyi2 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
