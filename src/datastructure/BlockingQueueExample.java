@@ -13,8 +13,8 @@ public class BlockingQueueExample {
         Consumer consumer = new Consumer(queue);  
   
         new Thread(producer).start();  
-        new Thread(consumer).start();  
-  
+        new Thread(consumer).start();
+
         Thread.sleep(4000);  
     }  
 }  
@@ -24,8 +24,9 @@ class Producer implements Runnable{
   
     public Producer(BlockingQueue queue) {  
         this.queue = queue;  
-    }  
-  
+    }
+
+    @Override
     public void run() {  
         try {  
             queue.put("1");  

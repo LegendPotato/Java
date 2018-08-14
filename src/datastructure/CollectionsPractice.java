@@ -1,9 +1,11 @@
 package datastructure;
 
 import java.util.*;
+import java.util.Collections;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class CollectionsPractice {
+
     public static void main(String[] args) {
         //线性表
 //        List list1= new ArrayList();
@@ -14,6 +16,13 @@ public class CollectionsPractice {
 //        System.out.println(list1);
         //链表
 //        List<String> list2 = new LinkedList();
+//        Collections.sort(list2, new Comparator<String>() {
+//            @Override
+//            public int compare(String o1, String o2) {
+//                return 0;
+//            }
+//        });
+
 //        list2.add("sss");
 //        list2.add("sss");
 //        list2.add("sss");
@@ -53,11 +62,23 @@ public class CollectionsPractice {
         map.put("null",null);
         System.out.println(map);
 
+
         //线程安全，推荐使用，不能有空值
         Map<String,Integer> map3= new ConcurrentHashMap<>();
         map3.put("12",12);
-        map3.put("null",null);
+        map3.put("we",312);
+        map3.put("de",31);
+        map3.put("de",32);
+//        map3.put("null",null);
         System.out.println(map3);
+        Set<Map.Entry<String,Integer>> setOfMap = map3.entrySet();
+        for (Map.Entry<String,Integer> entry : setOfMap){
+            System.out.println(entry);
+        }
+        for (String key : map3.keySet()){
+            System.out.println(key + " " + map3.get(key));
+        }
+
 
         //线程安全，低效，不能有空值
 //        Map<String,Integer> map2 = new Hashtable();
@@ -72,6 +93,44 @@ public class CollectionsPractice {
 //        map1.put("a", 3);
 //        System.out.println(map1);
 
+        class A {
+            private int a;
+            public A(int i){
+                this.a = i;
+            }
+            @Override
+            public int hashCode(){
+                return 1;
+            }
+
+            @Override
+            public boolean equals(Object O){
+                return true;
+            }
+        }
+        Map<A,Integer> map1= new HashMap<>();
+        A a1 = new A(1);
+        A a2 = new A(2);
+        map1.put(a1,1);
+        map1.put(a1,2);
+        map1.put(a2,3);
+        System.out.println(map1);
+
+
+        ArrayList<String> list = new ArrayList<String>(Arrays.asList("a","b","c","d"));
+        for(int i=0;i<list.size();i++){
+            list.remove(i);
+        }
+        System.out.println(list.size());
+
+        ArrayList<String> list2 = new ArrayList<String>(Arrays.asList("a","a", "b",
+                "c", "d"));
+        for (int i = 0; i < list2.size(); i++) {
+            if (list2.get(i).equals("a")) {
+                list2.remove(i);
+            }
+        }
+        System.out.println(list2);
 
 
     }
