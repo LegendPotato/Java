@@ -10,6 +10,7 @@ package practice;
  */
 
 public class Practice001 {
+
     public static void getAns(int n) {
 
         for (int min = 1; min < n / 2 + 1; min++) {
