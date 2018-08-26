@@ -1,31 +1,28 @@
 package datastructure;
 
+import java.util.Arrays;
+
 public class BSTree {
 
     //根节点
     private BSTNode root;
-
-    public BSTree() {
-
+    //初始化一个以root为根的二叉搜索树
+    public BSTree(BSTNode root) {
+        this.root = root;
     }
-
     //节点定义，通过一个内部类来定义
-    public class BSTNode {
-
+    class BSTNode {
         //key值和左右孩子节点，和父节点
         int key;
         BSTNode left;
         BSTNode right;
-        BSTNode parent;
 
-        public BSTNode(int key, BSTNode left, BSTNode right, BSTNode parent) {
+        public BSTNode(int key, BSTNode left, BSTNode right) {
             this.key = key;
             this.left = left;
             this.right = right;
-            this.parent = parent;
         }
     }
-
     //前序遍历
     public void preOrder(BSTNode root) {
         if (root != null) {
@@ -34,7 +31,6 @@ public class BSTree {
             preOrder(root.right);
         }
     }
-
     //中序遍历
     public void midOrder(BSTNode root) {
         if (root != null) {
@@ -43,7 +39,6 @@ public class BSTree {
             midOrder(root.right);
         }
     }
-
     //后序遍历
     public void postOrder(BSTNode root) {
         if (root != null) {
@@ -51,11 +46,6 @@ public class BSTree {
             postOrder(root.right);
             System.out.println(root.key);
         }
-    }
-
-    //初始化一个以root为根的二叉搜索树
-    public BSTree(BSTNode root) {
-        this.root = root;
     }
 
     //插入一个元素到树中
@@ -74,7 +64,6 @@ public class BSTree {
             }
         }
     }
-
     //查找key值
     public BSTNode search(BSTNode root, int key) {
         if (root == null) return null;
@@ -87,6 +76,11 @@ public class BSTree {
                 return search(root.right, key);
             }
         }
+    }
+
+    public static void main(String[] args) {
+        int a = 113;
+        System.out.println(String.valueOf(a));
     }
 
 
