@@ -1,4 +1,4 @@
-package practice.practice;
+package ac.practice;
 /**
  * 1.输入一个正数n，输出所有和为n的连续正数序列。
  分析：设定两个指针，min指向和为n的连续正数序列的最小值，max指向和为n的连续正数序列最大值。sum表示真正的和。

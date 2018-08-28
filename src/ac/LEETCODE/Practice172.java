@@ -1,4 +1,4 @@
-package practice.LEETCODE;
+package ac.LEETCODE;
 
 import java.util.Scanner;
 

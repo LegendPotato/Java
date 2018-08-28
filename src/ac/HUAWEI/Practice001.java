@@ -1,4 +1,4 @@
-package practice.HUAWEI;
+package ac.HUAWEI;
 
 import java.util.Scanner;
 

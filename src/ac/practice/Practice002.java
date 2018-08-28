@@ -1,4 +1,4 @@
-package practice.practice;
+package ac.practice;
 /**
  *   2.给定一个排好序的链表，删除链表中重复的结点，返回链表头指针。
     分析：

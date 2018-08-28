@@ -1,4 +1,4 @@
-package practice.HUAWEI;
+package ac.HUAWEI;
 
 public class Practice002 {
 

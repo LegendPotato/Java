@@ -1,4 +1,4 @@
-package practice.WANGYI;
+package ac.WANGYI;
 
 import java.util.Scanner;
 
