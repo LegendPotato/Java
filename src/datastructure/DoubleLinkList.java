@@ -1,9 +1,7 @@
 package datastructure;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class DoubleLink {
+//双向链表
+public class DoubleLinkList {
 
     //表头
     private LNode mHead;
@@ -25,7 +23,7 @@ public class DoubleLink {
     }
 
     //双向链表初始化
-    public DoubleLink() {
+    public DoubleLinkList() {
         mHead = new LNode(0,null,null);
         mHead.prev = mHead.next = mHead;
         count = 0;

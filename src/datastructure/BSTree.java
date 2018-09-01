@@ -1,7 +1,6 @@
 package datastructure;
 
-import java.util.Arrays;
-
+//二叉搜索树
 public class BSTree {
 
     //根节点
