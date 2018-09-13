@@ -1,4 +1,4 @@
-package AC.LEETCODE;
+package LEETCODE;
 
 //就是一个归并的思路，考察链表操作基本功
 public class Solution21 {

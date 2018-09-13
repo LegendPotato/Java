@@ -1,4 +1,4 @@
-package AC.LEETCODE;
+package LEETCODE;
 
 /**
  * 定义一个单向链表，很考察基本功，非常好

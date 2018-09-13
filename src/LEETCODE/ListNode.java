@@ -1,4 +1,4 @@
-package AC.LEETCODE;
+package LEETCODE;
 
 //Definition for singly-linked list.
 

@@ -1,4 +1,4 @@
-package AC.LEETCODE;
+package LEETCODE;
 
 public class Solution206 {
     public ListNode reverseList(ListNode head){

@@ -1,4 +1,4 @@
-package AC.LEETCODE;
+package LEETCODE;
 
 public class Solution92 {
     public ListNode reverseBetween(ListNode head, int m, int n) {

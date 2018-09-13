@@ -1,4 +1,4 @@
-package AC.LEETCODE;
+package LEETCODE;
 
 import java.util.Scanner;
 
