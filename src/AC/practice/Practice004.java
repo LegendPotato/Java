@@ -77,7 +77,7 @@ public class Practice004 {
  *                     keyList.add(e.getKey());
  *                 }
  *             }
- *             //最后遍历keyList，输出第一次出现的key即可。
+ *             //最后遍历keyList，输出第一次出现的key即可
  *             for (String i : keyList) {
  *                 System.out.println(i);
  *                 break;
