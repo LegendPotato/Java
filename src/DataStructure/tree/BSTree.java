@@ -1,14 +1,16 @@
-package DataStructure;
+package DataStructure.tree;
 
 //二叉搜索树
 public class BSTree {
 
     //根节点
     private BSTNode root;
+
     //初始化一个以root为根的二叉搜索树
     public BSTree(BSTNode root) {
         this.root = root;
     }
+
     //节点定义，通过一个内部类来定义
     class BSTNode {
         //key值和左右孩子节点，和父节点
@@ -22,6 +24,7 @@ public class BSTree {
             this.right = right;
         }
     }
+
     //前序遍历
     public void preOrder(BSTNode root) {
         if (root != null) {
@@ -30,6 +33,7 @@ public class BSTree {
             preOrder(root.right);
         }
     }
+
     //中序遍历
     public void midOrder(BSTNode root) {
         if (root != null) {
@@ -38,6 +42,7 @@ public class BSTree {
             midOrder(root.right);
         }
     }
+
     //后序遍历
     public void postOrder(BSTNode root) {
         if (root != null) {
@@ -63,6 +68,7 @@ public class BSTree {
             }
         }
     }
+
     //查找key值
     public BSTNode search(BSTNode root, int key) {
         if (root == null) return null;

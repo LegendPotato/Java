@@ -1,4 +1,4 @@
-package DataStructure;
+package DataStructure.linklist;
 
 //单向链表
 public class SingleLinkList {
@@ -82,19 +82,19 @@ public class SingleLinkList {
 
     //删除某个节点，成功返回值，没有这个值返回null
 
-    public Object delete(Object obj){
+    public Object delete(Object obj) {
         Node temp = head;
         Node previous = head;
         //链表为空
-        if (temp == null){
+        if (temp == null) {
             return null;
         }
         //链表不为空，但当前节点不等于obj，一路遍历下去
-        while (!temp.data.equals(obj)){
-            if (temp.next !=null){
+        while (!temp.data.equals(obj)) {
+            if (temp.next != null) {
                 previous = temp;
                 temp = temp.next;
-            }else {
+            } else {
                 return null;
             }
         }
@@ -104,19 +104,20 @@ public class SingleLinkList {
     }
 
     //打印链表
-    public void print(){
+    public void print() {
         Node temp = this.head;
-        if (temp==null){
+        if (temp == null) {
             System.out.println("空链表");
         }
-        while (temp.next!=null){
+        while (temp.next != null) {
             System.out.print(temp.data + "--");
-            temp= temp.next;
+            temp = temp.next;
         }
         System.out.print(temp.data);
         System.out.println();
     }
-    public int getSize(){
+
+    public int getSize() {
         return this.size;
     }
 

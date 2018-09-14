@@ -58,23 +58,23 @@ public class CollectionsPractice {
         map.put("bn", 2);
         map.put("s", 1);
         map.put("a", 3);
-        map.put("null",null);
+        map.put("null", null);
         System.out.println(map);
 
 
         //线程安全，推荐使用，不能有空值
-        Map<String,Integer> map3= new ConcurrentHashMap<>();
-        map3.put("12",12);
-        map3.put("we",312);
-        map3.put("de",31);
-        map3.put("de",32);
+        Map<String, Integer> map3 = new ConcurrentHashMap<>();
+        map3.put("12", 12);
+        map3.put("we", 312);
+        map3.put("de", 31);
+        map3.put("de", 32);
 //        map3.put("null",null);
         System.out.println(map3);
-        Set<Map.Entry<String,Integer>> setOfMap = map3.entrySet();
-        for (Map.Entry<String,Integer> entry : setOfMap){
+        Set<Map.Entry<String, Integer>> setOfMap = map3.entrySet();
+        for (Map.Entry<String, Integer> entry : setOfMap) {
             System.out.println(entry);
         }
-        for (String key : map3.keySet()){
+        for (String key : map3.keySet()) {
             System.out.println(key + " " + map3.get(key));
         }
 
@@ -94,35 +94,37 @@ public class CollectionsPractice {
 
         class A {
             private int a;
-            public A(int i){
+
+            public A(int i) {
                 this.a = i;
             }
+
             @Override
-            public int hashCode(){
+            public int hashCode() {
                 return 1;
             }
 
             @Override
-            public boolean equals(Object O){
+            public boolean equals(Object O) {
                 return true;
             }
         }
-        Map<A,Integer> map1= new HashMap<>();
+        Map<A, Integer> map1 = new HashMap<>();
         A a1 = new A(1);
         A a2 = new A(2);
-        map1.put(a1,1);
-        map1.put(a1,2);
-        map1.put(a2,3);
+        map1.put(a1, 1);
+        map1.put(a1, 2);
+        map1.put(a2, 3);
         System.out.println(map1);
 
 
-        ArrayList<String> list = new ArrayList<String>(Arrays.asList("a","b","c","d"));
-        for(int i=0;i<list.size();i++){
+        ArrayList<String> list = new ArrayList<String>(Arrays.asList("a", "b", "c", "d"));
+        for (int i = 0; i < list.size(); i++) {
             list.remove(i);
         }
         System.out.println(list.size());
 
-        ArrayList<String> list2 = new ArrayList<String>(Arrays.asList("a","a", "b",
+        ArrayList<String> list2 = new ArrayList<String>(Arrays.asList("a", "a", "b",
                 "c", "d"));
         for (int i = 0; i < list2.size(); i++) {
             if (list2.get(i).equals("a")) {

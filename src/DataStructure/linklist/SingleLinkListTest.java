@@ -1,4 +1,4 @@
-package DataStructure;
+package DataStructure.linklist;
 
 public class SingleLinkListTest {
     public static void main(String[] args) {

@@ -40,13 +40,14 @@ package AC.WANGYI;
 //
 //    }
 //}
+
 import java.util.Scanner;
 
 public class wangyi2 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
-        int[]a = new int[n];
+        int[] a = new int[n];
         for (int i = 0; i < n; i++) {
             a[i] = in.nextInt();
         }
@@ -54,18 +55,18 @@ public class wangyi2 {
         int[] question = new int[questionCount];
         for (int i = 0; i < questionCount; i++) {
             question[i] = in.nextInt();
-            count(question[i],a,n);
+            count(question[i], a, n);
         }
     }
 
-    public static void count(int number,int[]a,int n){
-        int temp=a[0];
-        for (int i=0;i<n;i++){
-            if (number>temp){
-                temp += a[i+1];
+    public static void count(int number, int[] a, int n) {
+        int temp = a[0];
+        for (int i = 0; i < n; i++) {
+            if (number > temp) {
+                temp += a[i + 1];
                 continue;
-            }else {
-                System.out.println(i+1);
+            } else {
+                System.out.println(i + 1);
                 break;
             }
         }

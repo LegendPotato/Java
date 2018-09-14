@@ -8,37 +8,37 @@ public class DeadLockDemo {
         new DeadLockDemo().deadLock();
     }
 
-    private void deadLock(){
+    private void deadLock() {
         Thread t1 = new Thread(new Runnable() {
             @Override
             public void run() {
-                synchronized (A){
+                synchronized (A) {
                     try {
                         Thread.sleep(2000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    synchronized (B){
+                    synchronized (B) {
                         System.out.println(1);
                     }
                 }
             }
-        },"yyyyyyyyyyyyyyyyyyyyyy");
+        }, "yyyyyyyyyyyyyyyyyyyyyy");
         Thread t2 = new Thread(new Runnable() {
             @Override
             public void run() {
-                synchronized (B){
+                synchronized (B) {
                     try {
                         Thread.sleep(2000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    synchronized (A){
+                    synchronized (A) {
                         System.out.println(2);
                     }
                 }
             }
-        },"zzzzzzzzzzzzzzzzzzzzzzzz");
+        }, "zzzzzzzzzzzzzzzzzzzzzzzz");
         t1.start();
         t2.start();
     }

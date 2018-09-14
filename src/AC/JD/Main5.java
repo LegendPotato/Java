@@ -17,7 +17,7 @@ public class Main5 {
         int count = 0;
         for (int i = 0; i < number; i++) {
             for (int j = 0; j < number; j++) {
-                if (a[i]<a[j] && b[i] < b[j] && c[i]<c[j]){
+                if (a[i] < a[j] && b[i] < b[j] && c[i] < c[j]) {
                     count++;
                     break;
                 }

@@ -1,4 +1,4 @@
-package LEETCODE;
+package Leetcode;
 
 public class Solution263 {
     //计算丑数，只含有质因数2，3，5的数，14就不是，因为含有质因数7

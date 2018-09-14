@@ -8,11 +8,12 @@ public class Main {
         int n = sc.nextInt();
         System.out.println(count(n));
     }
-    static int count(int n){
-        if (n == 1){
+
+    static int count(int n) {
+        if (n == 1) {
             return 1;
-        }else {
-            return 2*count(n-1);
+        } else {
+            return 2 * count(n - 1);
         }
     }
 

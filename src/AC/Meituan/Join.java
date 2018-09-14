@@ -1,7 +1,5 @@
 package AC.Meituan;
 
-import java.util.*;
-
 public class Join {
     public static void main(String[] args) {
         Object o = new Object();

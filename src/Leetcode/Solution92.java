@@ -1,4 +1,4 @@
-package LEETCODE;
+package Leetcode;
 
 public class Solution92 {
     public ListNode reverseBetween(ListNode head, int m, int n) {
@@ -18,21 +18,21 @@ public class Solution92 {
             return head;
         }
         //如果是从1开始反转，赋head,如果不是，赋font.next
-        node1 = m==1 ?head:front.next;
+        node1 = m == 1 ? head : front.next;
 
         ListNode node2 = node1.next;
-        node1.next=back;
+        node1.next = back;
         ListNode next = null;
-        while (node2!=back){
+        while (node2 != back) {
             next = node2.next;
-            node2.next=node1;
-            node1=node2;
-            node2=next;
+            node2.next = node1;
+            node1 = node2;
+            node2 = next;
         }
-        if (front!=null){
+        if (front != null) {
             front.next = node1;
             return head;
-        }else {
+        } else {
             return node1;
         }
     }

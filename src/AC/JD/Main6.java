@@ -12,30 +12,30 @@ public class Main6 {
             int[] array = new int[pointCount];
 
             for (int j = 0; j < edgeCount; j++) {
-                int x = sc.nextInt()-1;
-                int y = sc.nextInt()-1;
+                int x = sc.nextInt() - 1;
+                int y = sc.nextInt() - 1;
                 array[x]++;
                 array[y]++;
             }
 
 
             //设定一个flag，观察有没有已经打印结果
-            int flag =0;
+            int flag = 0;
             for (int j = 0; j < pointCount; j++) {
-                if (array[j] == pointCount-1){
-                    flag=1;
+                if (array[j] == pointCount - 1) {
+                    flag = 1;
                     System.out.println("Yes");
                     break;
                 }
-                if (array[j] == 0){
-                    flag=1;
+                if (array[j] == 0) {
+                    flag = 1;
                     System.out.println("No");
                     break;
                 }
             }
-            if (flag==1) {
+            if (flag == 1) {
                 continue;
-            }else {
+            } else {
                 System.out.println("No");
             }
         }

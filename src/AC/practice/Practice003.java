@@ -8,34 +8,35 @@ package AC.practice;
  */
 public class Practice003 {
 
-    public static int getPos(int[] A, int n,int val){
-        if (n==0 || A ==null){
+    public static int getPos(int[] A, int n, int val) {
+        if (n == 0 || A == null) {
             return -1;
         }
         int low = 0;
-        int high = n-1;
-        while (low<=high){
+        int high = n - 1;
+        while (low <= high) {
             //防止溢出
-            int mid = low + (high-low)/2;
-            if (A[mid] ==val){
+            int mid = low + (high - low) / 2;
+            if (A[mid] == val) {
                 //取第一次出现的位置返回
-                for (int i =low;i<=mid;i++){
-                    if (A[i]==val){
+                for (int i = low; i <= mid; i++) {
+                    if (A[i] == val) {
                         return i;
                     }
                 }
-            }else if(A[mid] < val){
+            } else if (A[mid] < val) {
                 low = mid + 1;
                 continue;
-            }else {
+            } else {
                 high = mid - 1;
                 continue;
             }
         }
         return -1;
     }
+
     public static void main(String[] args) {
-        int A[] = { 2, 4, 5, 6, 9, 10 };
+        int A[] = {2, 4, 5, 6, 9, 10};
         int val = 6;
         int n = A.length;
         int result = getPos(A, n, val);

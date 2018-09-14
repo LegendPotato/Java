@@ -17,7 +17,7 @@ public class Practice001 {
             list[i] = 0;
         }
         for (int i = 0; i < number; i++) {
-            list[sc.nextInt()-1]++;
+            list[sc.nextInt() - 1]++;
         }
         Arrays.sort(list);
         System.out.println(list[0]);

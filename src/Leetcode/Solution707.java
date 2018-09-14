@@ -1,4 +1,4 @@
-package LEETCODE;
+package Leetcode;
 
 /**
  * 定义一个单向链表，很考察基本功，非常好
@@ -19,10 +19,12 @@ class MyLinkedList {
     //初始的时候一定要定义一个头指针，最好再定义一个数量，count这个变量方便后面的方法实现
     Node head;
     int count;
+
     //链表的节点定义 内部类
     class Node {
         int value;
         Node next;
+
         public Node(int value) {
             this.value = value;
             this.next = null;

@@ -8,7 +8,7 @@ public class DiffBetweenStartAndRun {
         myThread.start();
         //myThread.run();
         System.out.println(Thread.currentThread().getName());
-        for (int i=0;i<100;i++){
+        for (int i = 0; i < 100; i++) {
             System.out.println(i);
             try {
                 Thread.sleep(500);
@@ -21,8 +21,9 @@ public class DiffBetweenStartAndRun {
 
 
 }
-class TestThread extends Thread{
-    public void run(){
+
+class TestThread extends Thread {
+    public void run() {
         for (int i = 100; i < 200; i++) {
             System.out.println(i);
             try {

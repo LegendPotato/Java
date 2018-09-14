@@ -1,6 +1,8 @@
 package IO;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Formatter;
+import java.util.List;
 
 public class Practice {
     public static void main(String[] args) {
@@ -39,16 +41,17 @@ public class Practice {
 //                }
 //            }
 //        }
-        System.out.println(new Formatter().format("%1$4d - the year of %2$f",956,Math.PI));
+        System.out.println(new Formatter().format("%1$4d - the year of %2$f", 956, Math.PI));
         List list = new ArrayList();
 
-        while (true){
+        while (true) {
             list.add(new T());
         }
 
     }
-    public static class T{
-        public T(){
+
+    public static class T {
+        public T() {
 
         }
     }

@@ -12,22 +12,22 @@ public class wangyi3 {
         int max = input[0];
         int j = 0;
         for (int i = 0; i < 3; i++) {
-            if (max<input[i]){
+            if (max < input[i]) {
                 max = input[i];
-                j=i;
+                j = i;
             }
         }
         int sum = 0;
         for (int i = 0; i < 3; i++) {
 
-            if (i!=j){
+            if (i != j) {
                 sum += input[i];
             }
         }
         int result = sum * max;
 
-        int result2 = input[0]*input[1]*input[2];
-        System.out.println(result>result2?result:result2);
+        int result2 = input[0] * input[1] * input[2];
+        System.out.println(result > result2 ? result : result2);
 
     }
 }

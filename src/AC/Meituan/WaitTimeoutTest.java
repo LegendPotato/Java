@@ -1,17 +1,17 @@
 package AC.Meituan;
 
 // WaitTimeoutTest.java的源码
-class ThreadB extends Thread{
+class ThreadB extends Thread {
 
     public ThreadB(String name) {
         super(name);
     }
 
     public void run() {
-        long i=0;
+        long i = 0;
         System.out.println(Thread.currentThread().getName() + " run ");
         // 死循环，不断运行
-        while (!Thread.currentThread().isInterrupted()){
+        while (!Thread.currentThread().isInterrupted()) {
             i++;
         }
         System.out.println(i);
@@ -25,7 +25,7 @@ public class WaitTimeoutTest {
 
         ThreadB t1 = new ThreadB("t1");
 
-        synchronized(t1) {
+        synchronized (t1) {
             try {
                 // 启动“线程t1”
                 System.out.println(Thread.currentThread().getName() + " start t1");

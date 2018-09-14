@@ -26,9 +26,9 @@ public class Main2 {
             set.add(b[i]);
         }
         Iterator it = set.iterator();
-        while (it.hasNext()){
+        while (it.hasNext()) {
             System.out.print(it.next());
-            if (it.hasNext()){
+            if (it.hasNext()) {
                 System.out.print(" ");
             }
         }

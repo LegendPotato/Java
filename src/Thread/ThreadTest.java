@@ -16,6 +16,7 @@ public class ThreadTest {
 
 class MyRunnable implements Runnable {
     private int i = 0;
+
     @Override
     public void run() {
         System.out.println("in MyRunnable run");
@@ -26,7 +27,6 @@ class MyRunnable implements Runnable {
 }
 
 class MyThread extends Thread {
-  
 
 
     @Override

@@ -11,14 +11,15 @@ public class Main2 {
             int k = sc.nextInt();
             System.out.print(0);
             System.out.print(" ");
-            System.out.println(calculate(n,k));
+            System.out.println(calculate(n, k));
         }
     }
-    public static int calculate(int n,int k){
-        if (n ==k) return 0;
-        if (k==0 ||k ==1) return 0;
-        if(k + k-1 < n){
-            return k-1;
-        }else return n-k;
+
+    public static int calculate(int n, int k) {
+        if (n == k) return 0;
+        if (k == 0 || k == 1) return 0;
+        if (k + k - 1 < n) {
+            return k - 1;
+        } else return n - k;
     }
 }

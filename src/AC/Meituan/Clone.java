@@ -1,7 +1,6 @@
 package AC.Meituan;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 class Address implements Cloneable {
@@ -18,16 +17,16 @@ class Address implements Cloneable {
     @Override
     public Object clone() {
         Address addr = null;
-        try{
-            addr = (Address)super.clone();
-        }catch(CloneNotSupportedException e) {
+        try {
+            addr = (Address) super.clone();
+        } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
         return addr;
     }
 }
 
-class Student implements Cloneable{
+class Student implements Cloneable {
     private int number;
 
     //Student类里面有一个成员也是类，类成员
@@ -53,17 +52,18 @@ class Student implements Cloneable{
     public Object clone() {
         Student stu = null;
 
-        try{
+        try {
             //super.clone()即Object类里面的clone（）方法可是本地方法哦！！！！
-            stu = (Student)super.clone();	//浅复制
-        }catch(CloneNotSupportedException e) {
+            stu = (Student) super.clone();    //浅复制
+        } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
         //要是深复制，一定别忘了给里面的自定义类，也clone一下，当然这也要求自定义类实现Cloneable接口
-        stu.addr = (Address)addr.clone();	//深度复制
+        stu.addr = (Address) addr.clone();    //深度复制
         return stu;
     }
 }
+
 public class Clone {
 
     public static void main(String args[]) {
@@ -75,7 +75,7 @@ public class Clone {
         stu1.setAddr(addr);
         //到此stu1对象都附了值
 
-        Student stu2 = (Student)stu1.clone();
+        Student stu2 = (Student) stu1.clone();
         //到此stu2拥有了全部stu1的值
 
         System.out.println("学生1:" + stu1.getNumber() + ",地址:" + stu1.getAddr().getAdd());
