@@ -1,5 +1,7 @@
 package DataStructure.tree;
 
+//定义一个普通的二叉搜索树（二叉排序树）
+
 public interface Tree {
     //查找节点
     public Node find(int key);
@@ -25,5 +27,5 @@ public interface Tree {
     //删除节点
     public boolean delete(int key);
 
-    //Other Method......
+    //其他方法有没有，想一想
 }

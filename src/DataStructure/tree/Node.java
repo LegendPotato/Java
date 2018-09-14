@@ -1,6 +1,7 @@
 package DataStructure.tree;
 
-//二叉树节点的定义
+//二叉搜索树节点的定义
+
 public class Node {
     int data;   //节点数据
     Node leftChild; //左子节点的引用

@@ -1,5 +1,14 @@
 package DataStructure.tree;
 
+/**
+ * 数组 查找快，直接下标找，增和删慢，需要移动元素，动态数组如Java中的ArrayList也是一样
+ * 链表 查找慢，需要从表头遍历，增和删快，不需要移动元素，只改连接
+ * 二叉搜索树，查找和增、删都快
+ * 二叉搜索树要求：若它的左子树不空，则左子树上所有结点的值均小于它的根结点的值；
+ *              若它的右子树不空，则右子树上所有结点的值均大于它的根结点的值；
+ *              没有相同data的节点；
+ *              它的左、右子树也分别为二叉排序树。
+ */
 public class BinaryTree implements Tree {
     //表示根节点
     private Node root;
@@ -19,7 +28,7 @@ public class BinaryTree implements Tree {
         return null;//遍历完整个树没找到，返回null
     }
 
-    //插入节点
+    //插入节点，需要记录插入位置的父节点
     public boolean insert(int data) {
         Node newNode = new Node(data);
         if (root == null) {//当前树为空树，没有任何节点
@@ -75,29 +84,25 @@ public class BinaryTree implements Tree {
         }
     }
 
-    //找到最大值
+    //找到最大值，即找到最左边的叶子节点
     public Node findMax() {
         Node current = root;
-        Node maxNode = current;
-        while (current != null) {
-            maxNode = current;
+        while (current.rightChild != null) {
             current = current.rightChild;
         }
-        return maxNode;
+        return current;
     }
 
-    //找到最小值
+    //找到最小值，即找到最右面的叶子节点
     public Node findMin() {
         Node current = root;
-        Node minNode = current;
-        while (current != null) {
-            minNode = current;
+        while (current.leftChild != null) {
             current = current.leftChild;
         }
-        return minNode;
+        return current;
     }
 
-    @Override
+    //删除操作比较复杂
     public boolean delete(int key) {
         Node current = root;
         Node parent = root;
