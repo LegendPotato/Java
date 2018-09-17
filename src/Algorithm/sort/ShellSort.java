@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class ShellSort {
 
+    //希尔排序底部实际是插入排序，只不过一开始的“步长”为n/2，直至为1,为1的时候就基本上是有序的了
     public static void sort(int[] arr) {
         int n = arr.length;
         int d = n / 2;
