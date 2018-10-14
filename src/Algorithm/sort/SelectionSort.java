@@ -7,8 +7,9 @@ public class SelectionSort {
     public static void sort(int[] arr) {
         int n = arr.length;
         for (int i = 0; i < n; i++) {
+            //选择排序值记录角标，最后在交换
             int min = i;
-            for (int j = n - 1; j > i; j--) {
+            for (int j = i + 1; j < n; j++) {
                 if (arr[j] < arr[min])
                     min = j;
             }
