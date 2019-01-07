@@ -6,6 +6,9 @@ import java.util.concurrent.ConcurrentHashMap;
 public class CollectionsPractice {
 
     public static void main(String[] args) {
+
+        List list11 = new ArrayList();
+        System.out.println(list11.size());
         //线性表
 //        List list1= new ArrayList();
 //        list1.add(1);
