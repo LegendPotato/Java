@@ -23,6 +23,11 @@ public class Main3 {
         System.out.println(a);
         System.out.println(b);
         System.out.println(temp < temp2);
+
+        draw draw = new DrawImplOne() ;
+        draw.draw();
+        draw draw1 = new DrawImplTwo();
+        draw1.draw();
     }
 
 
